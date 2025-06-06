@@ -23,53 +23,12 @@ h1, h2, h3, h4, h5, strong, b, nav, .date {
 	font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "メイリオ", Meiryo, sans-serif;
 	font-weight: 600;
 }
-a:link, a:visited {
-	color: #08449d;
-	text-decoration: underline;
-}
-a:active, a:hover {
-	color: #08449d;
-	text-decoration: underline;
-	opacity: .6;
-	transition: all 0.5s ease;
-}
-a:focus {
-	outline: none;
-}
+
 img {
 	width: 100%;
 }
 
 /* header */
-#upperHeaderWrapper {
-	width: 100%;
-	background: #09449d;
-}
-#upperHeader {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 2px 1px 1px;
-	text-align: left !important;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-#upperHeader p {
-	color: #fff;
-	margin: 0;
-	font-size: 1.8rem;
-}
-#lang img {
-	width: 86px;
-	margin: 0 0 3px;
-}
-#headerWrapper {
-	width: 100%;
-	height: 100px;
-	margin: 0;
-	background-color: #FFF;
-	border-bottom: 20px solid #09449d;
-}
 header {
 	width: 1200px;
 	margin: 0 auto;
@@ -709,4 +668,33 @@ float: left !important;
 width: 20% !important;
 height: 20% !important;
 margin: 10px 10px 25px 10px !important;
+}
+
+/* ここから千里作 */
+.container{
+  width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.top-wrapper{
+  padding-top:180px;
+  padding-bottom:100px;
+  background-image:url("/img/top-preimg.jpg");
+  color:white;
+  background-size:cover;
+}
+
+a:link, a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:active, a:hover {
+	color: #08449d;
+	text-decoration: none;
+	opacity: .6;
+	transition: all 0.5s ease;
+}
+a:focus {
+	outline: none;
 }
