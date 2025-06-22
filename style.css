@@ -6,6 +6,9 @@ html {
 	font-size: 62.5%;
 }
 
+*{
+  box-sizing:border-box;
+}
 
 _:lang(x)::-internal-media-controls-overlay-cast-button, body {
  image-rendering: -webkit-optimize-contrast;
@@ -35,7 +38,6 @@ body {
 	line-height: 2;
 	text-align: center;
 	width: 100%;
-	max-width: 1000px;
 	margin: 0 auto;
 	background-image:url("/img/top-preimg2.jpg");
 	background-size:cover;
