@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 html {
-  overflow-y: scroll;
-  font-size: 62.5%;
+	overflow-y: scroll;
+	font-size: 62.5%;
 }
+
 
 *{
   box-sizing:border-box;
@@ -28,7 +29,7 @@ img {
 }
 
 h2 {
-	width: 500px;
+	width: 35%;
 	border-bottom: 6px double #fff;
 	margin: 0 auto;
 	margin-bottom: 50px;
@@ -180,7 +181,7 @@ figure {
 }
 
 .topics-wrapper {
-  width: 900px;
+  width: 60%;
 	height: 250px;
 	margin: 0 auto 20px;
 	overflow:auto;
