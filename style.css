@@ -39,6 +39,10 @@ body {
 	margin: 0 auto;
 	background-image:url("/img/top-preimg2.jpg");
 	background-size:cover;
+  min-height: 100vh;
+    position: relative;
+    padding-bottom: 138px;
+    box-sizing: border-box;
 }
 
 .container{
@@ -49,8 +53,8 @@ body {
 }
 
 .top-wrapper{
-  padding-top:75px;
-  padding-bottom:50px;
+  padding-top: 0;
+  padding-bottom: 50px;
   color:#575757;
 }
 
@@ -67,14 +71,33 @@ header {
 }
 header h1 {
 	margin: 0 auto;
-	padding-bottom: 20px;
+	padding: 20px 0 20px 0;
+	text-shadow: 1px 2px 3px #808080;
+}
+
+header h1 span {
+	color:#1f2f54e4;
+}
+
+.top-band {
+	width: 100%;
+	color:#fff;
+	background-color: #1f2f54e4;
+	text-align: left;
+	padding: 0px 0px 0px 150px;
+	display:flex;
+	height: 30px;
+}
+
+.lang {
+	margin-left: 70%;
 }
 
 /* nav */
 nav {
 	width: 100%;
 	padding:20px;
-	background-color: #fff;
+	background-color: #1f2f54e4;
 }
 
 nav li{
@@ -94,11 +117,11 @@ nav ul{
 }
 
 a:link, a:visited {
-	color: #575757;
+	color: #fff;
 	text-decoration: none;
 }
 a:active, a:hover {
-	color: #09449d;
+	color: #D3D3D3;
 	text-decoration: none;
 	opacity: .6;
 	transition: all 0.5s ease;
@@ -138,45 +161,43 @@ figure {
 	margin: 20px 45px;
 }
 
+
 /* topics */
 .topics li {
 	list-style: none;
 	margin: 0 0 10px;
-	padding: 15px 15px 15px 42px;
+	padding: 25px 15px 15px 42px;
 	line-height: 1.5;
-	background-color: #fff
+	background-color: #fff;
+	text-align: left;
 }
 
 .topics-wrapper {
-  width: 1200px;
+  width: 900px;
+	height: 250px;
 	margin: 0 auto 20px;
+	overflow:auto;
 }
 
 
 /*footer部分*/
-#contactWrapper {
-	width: 100%;
-}
-#contact {
-	width: 100%;
-	margin: 0 auto;
+.contact {
 	padding: 25px 0;
 	font-size: 1.5rem;
-	line-height: 1.6;
-	background: #1f2f54;
-	text-align: center;
-	border-top: 5px solid #1f2f54;
-	color: #fff;
+
 }
+
 footer {
 	width: 100%;
 	margin: 0;
-	padding: 5px 0;
 	text-align: center;
 	font-size: 1.4rem;
 	color: #fff;
 	background: #1f2f54;
+	position: absolute;
+    bottom: 0;
 }
+
 /* ページトップへ戻る */
 #page-top {
 	display: block;
@@ -214,4 +235,27 @@ footer {
 #page-top {
 	display: none;
 }
+}
+
+
+/* 論文ページ*/
+.papers, .works, .presentation {
+	margin: 35px 250px;
+}
+
+.papers h2, .works h2, .presentation h2 {
+	margin-top:50px;
+}
+
+.papers p, .works p, .presentation p {
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+/*建設中ページ*/
+.under-construction {
+	text-align: left;
+	padding: 50px 0 0 100px;
+	font-weight: bold;
+	font-size: 30px;
 }
