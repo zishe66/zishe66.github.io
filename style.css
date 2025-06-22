@@ -89,7 +89,7 @@ header h1 span {
 	padding: 0px 0px 0px 150px;
 	display:flex;
 	height: 30px;
-	max-width: 100%;
+	min-width: 0;
 }
 
 .lang {
