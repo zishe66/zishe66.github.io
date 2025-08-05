@@ -1,3 +1,4 @@
+// トップへスクロール
 $(function(){
   var pageTop = $("#page-top");
   pageTop.hide();
@@ -12,6 +13,15 @@ $(function(){
       pageTop.fadeOut();
     }
   });
+
+//論文などのアーカイブのスクロール設定
+  $('.side-menu a').click(function(){
+    var id = $(this).attr('href');
+    var position = $(id).offset().top;
+    $('html, body').animate({
+      'scrollTop' : position
+    }, 500);
+    });
 });
 
 
@@ -41,3 +51,4 @@ window.onclick = function(event) {
         modal.style.visibility = "hidden";
     }
 }
+
