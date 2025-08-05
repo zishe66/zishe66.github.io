@@ -2,7 +2,6 @@
 
 html {
 	overflow-y: scroll;
-	font-size: 62.5%;
 }
 
 
@@ -14,9 +13,16 @@ _:lang(x)::-internal-media-controls-overlay-cast-button, body {
  image-rendering: -webkit-optimize-contrast;
 }
 
-h1, h2, h3, h4, h5, strong, b, nav, .date {
+h1, h2, strong, b, nav, .date {
 	font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "メイリオ", Meiryo, sans-serif;
 	font-weight: 600;
+}
+
+h2 {
+	width: 350px;
+	border-bottom: 6px double #fff;
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
 
 p {
@@ -28,17 +34,9 @@ img {
 	width: 100%;
 }
 
-h2 {
-	width: 35%;
-	border-bottom: 6px double #fff;
-	margin: 0 auto;
-	margin-bottom: 50px;
-}
-
 
 body {
 	color: #575757;
-	font-size: 1.6rem;
 	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ", Meiryo, sans-serif;
 	font-weight: 500;
 	line-height: 2;
@@ -48,9 +46,8 @@ body {
 	background-image:url("/img/top-preimg2.jpg");
 	background-size:cover;
   min-height: 100vh;
-    position: relative;
-    padding-bottom: 138px;
-    box-sizing: border-box;
+  position: relative;
+  padding-bottom: 138px;
 }
 
 .container{
@@ -62,15 +59,16 @@ body {
 
 .top-wrapper{
   padding-top: 0;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   color:#575757;
 }
 
-.w30 {
-	width: 30% !important;
+.middle-wrapper {
+	margin-top: 30px;
 }
 
-/* header */
+
+/* ヘッダー部分 */
 header {
 	width: 100%;
 	margin: 0 auto;
@@ -91,18 +89,36 @@ header h1 span {
 	width: 100%;
 	color:#fff;
 	background-color: #1f2f54e4;
-	text-align: left;
-	padding: 0px 0px 0px 150px;
-	display:flex;
 	height: 30px;
-	min-width: 0;
+}
+
+.top-band p {
+	display: block;
+	width: fit-content;
+	float: left;
+	margin-left: 5%;
 }
 
 .lang {
-	margin-left: 70%;
+	float: right;
+	margin-right: 5%;
 }
 
-/* nav */
+/* メニュー部分 現時点では使用しない*/
+.open-hamburger {
+	background-color: #1f2f54e4;
+	margin-bottom: 0;
+	float: initial;
+	display: none;
+}
+
+.open-hamburger p {
+	color:#fff;
+	margin-bottom: 0;
+	display: inline-block;
+}
+
+/* ナビゲーション部分 */
 nav {
 	width: 100%;
 	padding:20px;
@@ -110,23 +126,21 @@ nav {
 }
 
 nav li{
-	margin: auto!important;
-	padding:auto;
-	margin: 0px 40px 0px 0px;
-	font-size: 20px;
+	margin: auto;
+	font-size: 1.25rem;
 }
 
-/*ナビゲーションを横並びに*/
 nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
 	margin: 0px;
 	padding: 0px;
 }
 
+/* リンク部分 */
 a:link, a:visited {
-	color: #fff;
+	color: #575757;
 	text-decoration: none;
 }
 a:active, a:hover {
@@ -139,9 +153,17 @@ a:focus {
 	outline: none;
 }
 
+/* トップページプロフィール */
 .profile-wrapper {
 	display: flex;
-	margin-left: 10%;
+  width: 80%;
+	padding: 0 auto;
+	margin: 0 10%;
+}
+
+.w30 {
+	width: clamp(250px, 50vw, 400px);
+	margin: 25px auto 0;
 }
 
 /* table */
@@ -182,9 +204,10 @@ figure {
 }
 
 .topics-wrapper {
-  width: 60%;
+  width: max(350px, 60vw);
 	height: 250px;
-	margin: 0 auto 20px;
+	padding-right: 30px;
+	margin: 0 auto 100px;
 	overflow:auto;
 }
 
@@ -192,19 +215,15 @@ figure {
 /*footer部分*/
 .contact {
 	padding: 25px 0;
-	font-size: 1.5rem;
-
 }
 
 footer {
 	width: 100%;
 	margin: 0;
-	text-align: center;
-	font-size: 1.4rem;
 	color: #fff;
 	background: #1f2f54;
 	position: absolute;
-    bottom: 0;
+	bottom: 0;
 }
 
 /* ページトップへ戻る */
@@ -247,9 +266,18 @@ footer {
 }
 
 
-/* 論文ページ等*/
-.papers, .works, .presentation, .overview {
-	margin: 35px 250px;
+/* サブページ全般のレイアウト調整*/
+.papers, .presentation {
+	margin: 75px 15% 75px;
+	word-break: break-all;
+}
+
+.overview {
+	margin: 0px 15% 75px;
+}
+
+.works {
+	margin: 0px 15% 75px;
 }
 
 .papers h2, .works h2, .presentation h2 {
@@ -260,6 +288,45 @@ footer {
 	text-align: left;
 	margin-bottom: 50px;
 }
+
+/* 論文ページアーカイブ */
+.side-menu {
+	height: fit-content;
+	width: 95%;
+	display: inline-block;
+	background-color: #e7e9e8;
+	margin: 0 auto;
+}
+
+.side-menu ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+.side-menu li {
+	display: inline-block;
+	border-bottom:dotted;
+	padding-left: 25px;
+	border-width:1px;
+}
+
+.side-menu li::before {
+	content: "";
+	background-color: #53aad0;
+	width: 5px;
+	height: 5px;
+	display:  inline-block;
+	margin-bottom: 4px;
+	margin-right: 5px;
+}
+
+/* 学会発表ページアーカイブ */
+.side-menu-title {
+	width: 350px;
+	border-bottom: none;
+	margin: 50px auto 0;
+}
+
 
 /*建設中ページ*/
 .under-construction {
@@ -381,4 +448,241 @@ sub, sup{
 #fig_12-2{
 	height: 80%;
 	width: 80%;
+}
+
+/* モーダルのスタイル */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.modal-content {
+    display: block;
+    width: auto;
+		max-width: 1000px;
+		max-height: 100%;
+}
+
+#close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* レスポンシブデザイン タブレット*/
+@media (max-width: 1000px) {
+  body {
+    font-size: 90%;
+  }
+
+	/* ヘッダー部分 */
+	.top-wrapper{
+    padding-bottom: 0px;
+  }
+
+  nav li {
+    font-size : 1.1rem;
+  }
+
+	/* トップページ */
+	.profile-wrapper {
+    width: 90%;
+	  margin: 0 5%;
+  }
+  
+	/* サブページ全般 */
+	.papers p, .works p, .presentation p {
+	  margin-bottom: 30px;
+  }
+
+	/* 研究概要ページ */
+  .abstract {
+		width: 90%;
+	}
+
+  .overview {
+	  margin: 0px 10% 50px;
+  }
+
+	.modal-content {
+		max-width: 100%;
+	}
+
+	#fig_01{
+	  height: 60%;
+	  width: 60%;
+  }
+
+  #fig_02, #fig_04, #fig_05, #fig_06, #fig_10, #fig_10-2, #fig_11{
+	  height: 50%;
+	  width: 50%;
+  }
+
+  #fig_03, #fig_09{
+	  height: 65%;
+	  width: 65%;
+  }
+
+  #formula{
+	  height: 85%;
+	  width: 85%;
+  }
+
+  #fig_07{
+	  height: 70%;
+	  width: 70%;
+  }
+
+  #fig_08, #fig_08-2{
+	  height: 55%;
+	  width: 55%;
+	  margin-left: 20%;
+  }
+
+  #fig_12{
+	  height: 45%;
+	  width: 45%;
+  }
+
+  #fig_12-2{
+	  height: 95%;
+	  width: 95%;
+  }
+
+}
+
+/* ナビゲーション部分の変更 */
+@media (max-width: 800px) {
+  nav li {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 550px) {
+	nav {
+		padding: 0;
+
+	}
+
+	nav ul {
+		display: flex;
+    flex-wrap: wrap;
+	}
+
+	nav li {
+		display: block;
+		width: 50%;
+		border: 1px solid #fff;
+		padding: 10px 0;
+	}
+
+  #overview-link {
+		width: 100%;
+	}
+}
+
+/* レスポンシブデザイン モバイル*/
+@media (max-width: 450px) {
+  body {
+    font-size: 80%;
+  }
+
+  h2 {
+		width: 250px;
+	}
+
+	/* ヘッダー部分 */
+  nav li {
+    font-size : 1rem;
+  }
+
+	/* トップページ */
+	.profile-wrapper {
+	  display: block;
+  }
+
+	/* 学会発表ページ */
+	.presentation {
+	  margin: 50px 10% 75px;
+  }
+
+  /* 著書ページ */
+	.works {
+	  margin: 0px 10% 75px;
+  }
+
+	/* 研究概要ページ */
+  .abstract {
+		width: 95%;
+	}
+
+  .overview {
+	  margin: 0px 10% 30px;
+  }
+
+	#fig_01{
+	  height: 75%;
+	  width: 75%;
+  }
+
+  #fig_02, #fig_04, #fig_05, #fig_06, #fig_10, #fig_10-2, #fig_11{
+	  height: 65%;
+	  width: 65%;
+  }
+
+  #fig_03, #fig_09{
+	  height: 80%;
+	  width: 80%;
+  }
+
+  #formula{
+	  height: 95%;
+	  width: 95%;
+  }
+
+  #fig_07{
+	  height: 85%;
+	  width: 85%;
+  }
+
+  #fig_08, #fig_08-2{
+	  height: 60%;
+	  width: 60%;
+	  margin-left: 20%;
+  }
+
+  #fig_12{
+	  height: 60%;
+	  width: 60%;
+  }
+
+  #fig_12-2{
+	  height: 95%;
+	  width: 95%;
+  }
+
+	/*建設中ページ*/
+  .under-construction {
+	  padding: 50px 0 0 30px;
+	  font-weight: bold;
+	  font-size: 16px;
+  }
+
 }

@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <title>田地川研究室 | ionics.eng.hokudai.ac.jp/</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/baf06814d2.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-  <header>
+  <header id="header">
     <div class="top-wrapper">
      <div class="container">
       <div class="top-band">
@@ -15,20 +17,25 @@
         <div class="lang">
         <span class="jp">JP</span>
         <span class="slash">/</span>
-        <a href="e_index.html" class="en">EN</a>
+        <a href="/English/e_index.html" class="en"><font color="#fff">EN</font></a>
         </div>
       </div>
       <h1><a href="index.html"><span>Tachikawa</span><font color="#575757"> Lab.</font></a></h1>
-      <div class="band"></div>
+<!-- ハンバーガーメニュー現時点では使用しないが残しておく-->
+      <div class="open-hamburger">
+        <p>menu</p>
+        <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
+      </div>
+<!-- ここまで -->
       <nav>
        <ul style="justify-content: flex-start;">
-        <li><a href="overview.html">研究成果の概要</a></li>
-        <li><a href="report.html">論文</a></li>
-        <li><a href="presentation.html">学会発表</a></li>
-        <li><a href="works.html">総説・著書・特許</a></li>
-        <li><a href="https://researchmap.jp/Hiroto_Tachikawa" target=”_brank”>外部資金</a></li>
-        <li><a href="kanita.html">夏旅行(蟹田通信)</a></li>
-        <li><a href="links.html">LINKS</a></li>
+        <li id="overview-link"><a href="overview.html"><font color="#fff">研究成果の概要</font></a></li>
+        <li><a href="papers.html"><font color="#fff">論文</font></a></li>
+        <li><a href="presentation.html"><font color="#fff">学会発表</font></a></li>
+        <li><a href="works.html"><font color="#fff">総説・著書・特許</font></a></li>
+        <li><a href="https://researchmap.jp/Hiroto_Tachikawa" target=”_brank”><font color="#fff">外部資金</font></a></li>
+        <li><a href="kanita.html"><font color="#fff">夏旅行(蟹田通信)</font></a></li>
+        <li><a href="links.html"><font color="#fff">LINKS</font></a></li>
        </ul>
       </nav>
      </div>
@@ -39,7 +46,7 @@
       <h2>Profile</h2>
       <div class="profile-wrapper">
         <figure class="w30"><img decoding="async" src="/img/Tachikawa_pic.jpg" alt="Dr.Tachikawa"></figure>
-        <table style="margin: 25px 0px;">
+        <table>
           <tr>
            <th>氏名</th>
            <th>田地川 浩人 (たちかわ ひろと/Hiroto Tachikawa)</th>
@@ -101,7 +108,7 @@
          <tr>
            <td>所属学会</td>
            <td>
-           <a href="http://www.csj.jp/"><font color="#0000FF">日本化学会</font></a>、<a href="https://www.asj.or.jp/jp/"><font color="#0000FF">日本天文学会</font></a>、<a href="https://radiation-chemistry.org/"><font color="#0000FF">日本放射線化学会</font></a>、<a href="https://www.acs.org/"><font color="#0000FF">アメリカ化学会</font></a>
+           <a href="http://www.csj.jp/" title="外部リンク"><font color="#0000FF">日本化学会</font></a>、<a href="https://www.asj.or.jp/jp/" title="外部リンク"><font color="#0000FF">日本天文学会</font></a>、<a href="https://radiation-chemistry.org/" title="外部リンク"><font color="#0000FF">日本放射線化学会</font></a>、<a href="https://www.acs.org/" title="外部リンク"><font color="#0000FF">アメリカ化学会</font></a>
          </td>
          </tr>
        </table>
@@ -111,16 +118,13 @@
       <h2>News & Topics</h2>
       <div class="topics-wrapper">
         <ul class="topics">
+<!-- 「News & Topics」更新時、以下のテンプレートを本コメントの下に張り付けて文言を編集してください
           <li>
             <div>
-              <p>学会発表を行いました。(2025/XX/XX)</p>
+              <p>●●しました。(20XX/XX/XX)</p>
             </div>
           </li>
-          <li>
-            <div>
-              <p>HPを更新しました。(2025/XX/XX)</p>
-            </div>
-          </li>
+-->
           <li>
             <div>
               <p>HPを開設しました。(2025/XX/XX)</p>
@@ -136,7 +140,7 @@
      <strong>北海道大学工学研究院 田地川研究室</strong><br>
      〒0608628 北海道札幌市北区北１３条西８丁目 北海道大学工学部
    </div>
-   <p>Copyright 2025 Tachikawa</p>
+   <p>Copyright 2025 Tachikawa Lab.</p>
   </div>
 </footer>
 <a href="#header" id="page-top"><span class="arrow"></span></a>
