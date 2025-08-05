@@ -4,7 +4,6 @@ html {
 	overflow-y: scroll;
 }
 
-
 *{
   box-sizing:border-box;
 }
@@ -215,6 +214,10 @@ figure {
 /*footer部分*/
 .contact {
 	padding: 25px 0;
+}
+
+.sp-br {
+	display: none;
 }
 
 footer {
@@ -612,6 +615,11 @@ sub, sup{
   nav li {
     font-size : 1rem;
   }
+
+	/* フッター部分 */
+  .sp-br {
+		display: block;
+	}
 
 	/* トップページ */
 	.profile-wrapper {
